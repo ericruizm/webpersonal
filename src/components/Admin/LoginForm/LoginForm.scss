@@ -1,0 +1,38 @@
+@import "../../../scss/index.scss";
+
+.login-form {
+  &__input {
+    .ant-input-prefix {
+      font-size: 0em + 22px / $defaultFontSize;
+    }
+
+    input {
+      font-size: 0em + 20px / $defaultFontSize;
+      padding: 3px 3px 3px 10px !important;
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: none;
+      }
+    }
+  }
+  &__button {
+    width: 50%;
+    border-radius: 2px;
+    font-size: 0em + 22px / $defaultFontSize;
+    background-color: $primary-color;
+    color: $font-light;
+    height: 42px;
+
+    &:hover {
+      background-color: $primary-color-hover;
+      color: $font-light;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $primary-color;
+      color: $font-light;
+      border: 0;
+    }
+  }
+}

@@ -6,12 +6,22 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@tinymce/tinymce-react": "^3.6.0",
+    "antd": "^4.3.2",
+    "jwt-decode": "^2.2.0",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1",
+    "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-drag-sortable": "^1.0.6",
+    "react-dropzone": "^11.0.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -30,5 +40,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://sharp-heisenberg-e80db7.netlify.app/"
 }

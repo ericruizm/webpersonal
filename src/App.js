@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import routes from "./config/routes";
+import AuthProvider from "./providers/AuthProvider";
+//El AuthProvider envuelve toda la app() para comprobar si un usuario está logeado o no
+
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          {routes.map((route, index) => (
+            <RouteWithSubRoutes key={index} {...route} />
+          ))}
+        </Switch>
+      </Router>
+    </AuthProvider>
+  );
+}
+
+function RouteWithSubRoutes(route) {
+  // console.log(route);
+  return (
+    <Route
+      path={route.path}
+      exact={route.exact}
+      render={(props) => <route.component routes={route.routes} {...props} />}
+    />
   );
 }
 
